@@ -45,6 +45,17 @@ Das Skript ist für den Einsatz auf PHP-basierten Webservern vorgesehen und rich
 
 **Wichtiger Sicherheitshinweis:** Ein geänderter Dateiname ist keine Zugriffskontrolle. Verwende nach Möglichkeit zusätzliche Zugriffsbeschränkungen und entferne das Diagnose-Skript nach Abschluss der Prüfung wieder vom Webserver, sofern es nicht ausdrücklich für einen weiteren Einsatz benötigt wird.
 
+#### Webspace erst mal unerreichbar machen: htaccess-[andere|drupal|joomla|shopware|typo3|wordpress|simple]
+
+1. Wählen Sie zuerst das entsprechende Script als Vorlage aus. 
+   andere für andere Websites, die Umleitungen etc. benötigen
+   simple sofern keine .htaccess vorher vorhanden war
+2. Speichern Sie das gewünschte Script als .htaccess in Ihrem Webspace-Hauptverzeichnis und ggf. wenn benötigt auch Unterverzeichnissen
+3. Passen Sie die IP in der .htaccess an. 
+4. Prüfen Sie die Log-Files, ob Zugriffe von außen noch weiter in den logs-Protokolliert werden
+5. Wenn nur noch Sie auf den Webspace zugreifen können, mit Ihrer IP, können Sie in Ruhe die Umstellung und Anpassungen durchführen.
+6. Vergessen Sie am Ende nicht wieder den Zugriff für alle zu erlauben!
+
 #### Hilfe und Videoanleitungen
 
 Wer Unterstützung bei der Verwendung benötigt, findet ab dem 22. Oktober 2026 Videoanleitungen auf dem YouTube-Kanal:

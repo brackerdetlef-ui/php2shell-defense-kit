@@ -1,0 +1,30 @@
+# =========================================================================
+# NOTFALL-IP-SPERRE UND TYPO3 REWRITE-REGELN
+# =========================================================================
+# ACHTUNG: Ersetzen Sie '123.45.67.89' mit Ihrer echten öffentlichen IP-Adresse!
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# 1. IP-ZUGRIFFSBESCHRÄNKUNG (Apache 2.4+)
+# -------------------------------------------------------------------------
+<RequireAll>
+    # Grundsätzlich jeden Zugriff verweigern
+    Require all denied
+    
+    # Eigene Admin/Test-IPs freigeben (IPv4 und/oder IPv6)
+    Require ip 123.45.67.89
+    # Require ip 2001:db8::1
+</RequireAll>
+
+# -------------------------------------------------------------------------
+# 2. TYPO3 ROUTING REWRITE ENGINE
+# -------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# TYPO3 Backend & Frontend Routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.php [L]
+</IfModule>

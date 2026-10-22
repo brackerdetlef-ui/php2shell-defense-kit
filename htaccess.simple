@@ -1,0 +1,38 @@
+# =========================================================================
+# NOTFALL-IP-SPERRE UND SAMMLUNG COMMON REWRITE-ANWEISUNGEN (MUSTER)
+# ANLEITUNG:
+# 1. Wählen Sie diese htaccess-Version oder eine andere als Vorlage
+#    wie z.B. für drupal, joomla, shopware, typo3, wordpress, simple etc.
+# Sofern Sie diese Datei als Muster verwenden:
+# 2. Speichern Sie diese Datei im Hauptverzeichnis als .htaccess
+# 3. Ersetzen Sie die IP hinter Require ip als IPv4 oder IPv6
+# 4. Passen Sie Ihr Script entsprechend an
+# 
+# Project:     php2shell-defense-kit
+# Description: Security tests, hardening scripts, and documentation
+#              for php2shell mitigations.
+# Copyright (c) 2026 Detlef Bracker
+# GitHub:      https://github.com/brackerdetlef-ui/php2shell-defense-kit
+# 
+# License:     Apache-2.0
+#              See the LICENSE file in the project root for details.
+# 
+# This file is part of php2shell-defense-kit.
+# Please retain this copyright notice and the project attribution
+# in copies and redistributed versions of this file.
+# =========================================================================
+# ACHTUNG: Ersetzen Sie '123.45.67.89' mit Ihrer echten öffentlichen IP-Adresse!
+# =========================================================================
+
+# -------------------------------------------------------------------------
+# 1. IP-ZUGRIFFSBESCHRÄNKUNG (Apache 2.4+)
+# -------------------------------------------------------------------------
+
+<RequireAll>
+    # Grundsätzlich allen Zugriff verweigern
+    Require all denied
+
+    # Eigene öffentliche IP-Adresse(n) erlauben (IPv4 / IPv6)
+    Require ip 123.45.67.89
+    # Require ip 2001:db8::1
+</RequireAll>
