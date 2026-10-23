@@ -62,6 +62,12 @@ Wer Unterstützung bei der Verwendung benötigt, findet ab dem 22. Oktober 2026 
 
 **[YouTube – Datenwächter](https://www.youtube.com/@datenwächter)**
 
+Video 2: Wie Ihr das Script bedient: 
+https://www.youtube.com/watch?v=x8utj5VtGl4
+
+Video 1: Zu dem php2shell mal etwas anders erklärt:
+https://youtu.be/x8utj5VtGl4
+
 ### Verantwortungsvolle Verwendung
 
 Dieses Projekt dient der defensiven Sicherheitsprüfung, der Überprüfung von Gegenmaßnahmen und autorisierten Sicherheitsanalysen.
